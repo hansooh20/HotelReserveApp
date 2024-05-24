@@ -1,0 +1,2 @@
+class StayDateDetail < ApplicationRecord
+end
