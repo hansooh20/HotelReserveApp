@@ -1,0 +1,12 @@
+members
+t.string :name, null: false
+t.string :phone_number, null: false
+t.date :birthday
+t.integer :usage_count, null: false, default: 0
+t.integer :member_status, null: false, default: 0
+t.date :last_used_date
+
+employee
+t.integer :hotel_id
+t.string :name, null: false
+t.string :employee_number

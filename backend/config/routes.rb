@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :members
-  devise_for :employees
-  devise_for :admins
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  mount_devise_token_auth_for 'Member', at: 'auth'
+  mount_devise_token_auth_for 'Admin', at: 'auth'
+  mount_devise_token_auth_for 'Employee', at: 'auth'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  as :employee do
+    # Define routes for Employee within this block.
+  end
+  as :admin do
+    # Define routes for Admin within this block.
+  end
 end
