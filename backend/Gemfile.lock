@@ -66,7 +66,6 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    base64 (0.2.0)
     bcrypt (3.1.20)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
@@ -83,6 +82,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.12.1)
+      devise (>= 4.9.0)
     devise_token_auth (1.2.3)
       bcrypt (~> 3.0)
       devise (> 3.5.2, < 5)
@@ -90,7 +91,6 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashie (5.0.0)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -123,10 +123,6 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.16.5-aarch64-linux)
       racc (~> 1.4)
-    omniauth (2.1.2)
-      hashie (>= 3.4.6)
-      rack (>= 2.2.3)
-      rack-protection
     orm_adapter (0.5.0)
     psych (5.1.2)
       stringio
@@ -136,9 +132,6 @@ GEM
     rack (2.2.9)
     rack-cors (2.0.2)
       rack (>= 2.0.0)
-    rack-protection (3.2.0)
-      base64 (>= 0.1.0)
-      rack (~> 2.2, >= 2.2.4)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.8.3)
@@ -196,9 +189,9 @@ DEPENDENCIES
   bootsnap
   debug
   devise (~> 4.9.4)
+  devise-i18n (~> 1.12, >= 1.12.1)
   devise_token_auth (~> 1.2, >= 1.2.3)
   mysql2 (~> 0.5)
-  omniauth (~> 2.0)
   puma (~> 5.0)
   rack-cors (~> 2.0.2)
   rails (~> 7.0.8, >= 7.0.8.3)

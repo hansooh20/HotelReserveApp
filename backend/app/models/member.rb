@@ -6,4 +6,6 @@ class Member < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
+  validates :email, presence: true
+  validates :password, presence: true
 end
